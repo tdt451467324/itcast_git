@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>遍历数组</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="(value,index) in arr">{{value}}------{{index}}</li>
+    </ul>
+    <ul>
+        <li v-for="(value,index) in list">{{value.username}}------{{value.age}}</li>
+    </ul>
+</div>
+</body>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            arr:["aaa","bbb","ccc"],
+            list:[{username:"111",age:"18"},{username:"222",age:"20"}]
+        }
+    })
+</script>
+</html>

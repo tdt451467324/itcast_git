@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>快速入门</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    {{message}}
+    <button @click="fun('true')">改变</button>
+</div>
+</body>
+<script>
+   var vm=  new Vue({
+        el:"#app",
+        data:{
+            message:10
+        },
+        methods:{
+          fun:function (msg) {
+              vm.message=!vm.message
+          }  
+        }
+    })
+</script>
+</html>

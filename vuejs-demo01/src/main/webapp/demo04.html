@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>快速入门</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app"><div id="div" @mouseover="fun1()" style="width: 70%; height: 80%">
+    12345
+    <textarea @mouseover="fun2($event)">abc</textarea><br/>
+</div>
+</div>
+</body>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+        },
+        methods:{
+            fun1:function () {
+                alert("div区域")
+            },
+            fun2:function (e) {
+                alert("textarea区域...")
+            }
+        }
+    })
+</script>
+</html>

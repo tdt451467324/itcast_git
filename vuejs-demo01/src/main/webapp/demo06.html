@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>快速入门</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    用户名:<input type="text" v-model="user.username"><br/>
+    密码:<input type="text" v-model="user.password"><br/>
+    <input type="button" @click="fun()" value="按钮">
+</div>
+</body>
+<script>
+   var vm = new Vue({
+        el:"#app",
+        data: {
+            user: {
+                username: 123,
+                password: 123
+            },
+        },
+       methods:{
+           fun:function () {
+               alert(vm.user.username+"    "+vm.user.password)
+               vm.user.username="张三";
+               vm.user.password="111111";
+           }
+       }
+    })
+</script>
+</html>
